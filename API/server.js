@@ -29,14 +29,14 @@ app.post('/users', async (req,res) => {
 
 app.get('/users', async (req, res) => {
     /* res.send('Ok, deu bom') */
-
+    console.log(req)
     let users = []
     if (req.query){
         users = await prisma.user.findMany({
             where: {
                 name: req.query.name,
                 email: req.query.email,
-                age: Number(req.query.age)
+                age: req.query.age ? Number(req.query.age) : undefined
             }
         })
     } else {
