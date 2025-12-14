@@ -1,0 +1,1 @@
+API básico de CRUD para cadastro de usuários, utilizando conhecimentos de HTML, CSS e React para Front-End e NodeJS, MongoDB, Prisma, NPM para Back-End. A aplicação foi feita em 2 etapas, primeiramente implementando o Back e fazendo testes de validação, após isso foi construido o Front e realizado a conexão do mesmo.
