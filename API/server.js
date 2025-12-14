@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors'
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient()
@@ -7,6 +8,7 @@ export { prisma }
 
 const app = express() /* colocar a biblioteca numa variavel */
 app.use(express.json()) /* expressão p/ o express ativar o json */
+app.use(cors())
 
 app.post('/users', async (req,res) => {
 
